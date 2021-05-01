@@ -1,0 +1,175 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  color: white;
+  background-color: #333333;
+}
+
+i,
+svg {
+  pointer-events: none;
+}
+
+button {
+  outline: none;
+}
+
+h1{
+  font-family: 'Roboto', sans-serif;
+  font-weight: 100;
+}
+
+.kick-pad,
+.snare-pad,
+.hihat-pad {
+  width: 5rem;
+  height: 5rem;
+  margin: 1rem;
+  cursor: pointer;
+  border-radius: 0.3rem;
+}
+
+.kick-pad {
+  border-radius: 15px;
+  background: #5b0153;
+  box-shadow: 5px 5px 5px #2d2d2d, -5px -5px 5px #393939;
+}
+.snare-pad {
+  border-radius: 15px;
+  background: #613d00;
+  box-shadow: 5px 5px 5px #2d2d2d, -5px -5px 5px #393939;
+}
+.hihat-pad {
+  border-radius: 15px;
+  background: #404db5;
+  box-shadow: 5px 5px 5px #2d2d2d, -5px -5px 5px #393939;
+}
+
+.kick-pad.active {
+  background: #800075;
+  box-shadow: -5px -5px 5px #2d2d2d, 5px 5px 5px #393939;
+}
+.snare-pad.active {
+  background: #d68800;
+  box-shadow: -5px -5px 5px #2d2d2d, 5px 5px 5px #393939;
+}
+.hihat-pad.active {
+  background: #233cfb;
+  box-shadow: -5px -5px 5px #2d2d2d, 5px 5px 5px #393939;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  width: 70%;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
+  margin: 0rem, 2rem;
+}
+
+.mute {
+  color: white;
+  padding: 1rem;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  outline: none;
+  transition: all 0.5s ease;
+  border-radius: 8px;
+  background: #333333;
+  box-shadow: 5px 5px 5px #2d2d2d, -5px -5px 5px #393939;
+}
+
+.mute.active {
+  background: #240000;
+  box-shadow: -5px -5px 5px #2d2d2d, 5px 5px 5px #393939;
+}
+
+.tempo {
+  margin: 3rem;
+  width: 30%;
+}
+
+.tempo-slider {
+  padding: 0.2rem;
+  outline: none;
+  -webkit-appearance: none;
+  margin: 1rem 0;
+  width: 100%;
+  position: relative;
+  background: #333333;
+  box-shadow: 2px 2px 0px #2b2b2b, -2px -2px 0px #3b3b3b;
+  cursor: pointer;
+  border-radius: 1rem;
+}
+
+.tempo p {
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-align: center;
+}
+
+.pad {
+  transition: all 0.5s ease;
+}
+
+.play {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  color: #c37aff;
+  border: none;
+  cursor: pointer;
+  margin: 3rem;
+  border-radius: 30px;
+  background: #333333;
+  box-shadow: 5px 5px 5px #2d2d2d, -5px -5px 5px #393939;
+  transition: all 1s ease;
+}
+
+.play.active {
+  box-shadow: -5px -5px 5px #2d2d2d, 5px 5px 5px #393939;
+}
+
+select {
+  padding: 1rem;
+  font-size: 1rem;
+  margin-right: 1rem;
+  outline: none;
+}
+
+@keyframes playTrack {
+  form {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.2);
+  }
+}
